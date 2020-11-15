@@ -11,7 +11,7 @@ namespace Platformer.Mechanics
         
         private readonly float m_tan30 = Mathf.Tan(Mathf.PI/3);
 
-        public bool controlEnabled = true;
+        public bool controlEnabled = false;
         public bool inElevator = false;
         
         private bool canEnter = false;
@@ -30,8 +30,10 @@ namespace Platformer.Mechanics
         // Update is called once per frame
         protected override void Update()
         {
-            move.x = Input.GetAxis("Horizontal");
-            move.y = Input.GetAxis("Vertical");
+            if(controlEnabled){
+                move.x = Input.GetAxis("Horizontal");
+                move.y = Input.GetAxis("Vertical");
+            }
             base.Update();
         }
         
