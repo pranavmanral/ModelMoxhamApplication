@@ -1396,7 +1396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcbb35ebb2413417aaf4944f8f0b054f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floorHeight: 0
+  floorHeight: 0.1
   isStatic: 0
 --- !u!1 &1158888602
 GameObject:
