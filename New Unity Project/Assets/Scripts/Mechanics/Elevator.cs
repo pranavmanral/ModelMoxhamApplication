@@ -70,7 +70,7 @@ namespace Platformer.Mechanics
                 //this.transform.Translate(0, (float)(3.2-this.transform.position.y),0);
             }
             if(level == 2) {
-                targetY = 5.23f;
+                targetY = 8.17f;
 
                 //this.transform.Translate(0, (float)(5.2-this.transform.position.y),0);
             }
