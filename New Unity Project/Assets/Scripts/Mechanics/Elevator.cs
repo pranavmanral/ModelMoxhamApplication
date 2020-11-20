@@ -10,7 +10,7 @@ namespace Platformer.Mechanics
     
         GameObject player;
         GameObject elevatorUI;
-        float targetY = -3.77f;
+        float targetY = -0.291f;
         private Transform target;
         public float speed = 1.0f;
         public bool arrived = false;
@@ -145,7 +145,6 @@ namespace Platformer.Mechanics
                 float step =  speed * Time.deltaTime; // calculate distance to move
                 target.position = new Vector2(transform.position.x, targetY);
                 transform.position = Vector2.MoveTowards(transform.position, target.position, step);
-                Debug.Log(target.position.y);
                 // Check if the position of the cube and sphere are approximately equal.
                 if (Vector3.Distance(this.transform.position, target.position) < 0.001f)
                 {
