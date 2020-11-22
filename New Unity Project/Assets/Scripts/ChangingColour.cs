@@ -5,93 +5,81 @@ using UnityEngine.UI;
 
 public class ChangingColour : MonoBehaviour
 {
-    public SpriteRenderer head;
+    public SpriteRenderer hair;
+    public Color[] colors;
 
-    public Color pink;
-    public Color blue;
-    public Color green;
-    //public Image displayCopy;
-    public int whatColor = 1;
+    public Color[] mainColors;
 
+    public int hairColor = 0;
 
+    public SpriteRenderer main;
+    public SpriteRenderer mainRight;
+    public SpriteRenderer mainLeft;
+    public int mainColor = 0;
 
-    public SpriteRenderer torso;
-    public Color yellow;
-    public Color lightPink;
-    public Color skin;
+    public Color[] lowerColors;
+    public SpriteRenderer lowerLeftUp;
+    public SpriteRenderer lowerLeftDown;
+    public SpriteRenderer lowerRightUp;
+    public SpriteRenderer lowerRightDown;
+    public int lowerColor = 0;
 
-    public int torsoColor = 1;
-
-
-
+    // public SpriteRenderer main;
+    //public int mainColor = 1;
 
     void Start()
     {
-        
+        //colors.a = 0.42f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //displayCopy = head.color;
+        //displayCopy = hair.color;
 
-        if(whatColor == 1)
+        for (int i = 0; i < colors.Length; i++)
         {
-            head.color = pink;
-        }
-        else if(whatColor == 2)
+            if (i == hairColor)
+            {
+                hair.color = colors[i];
+            }
+        }         
+        ///////Main
+        for (int i = 0; i < colors.Length; i++)
         {
-            head.color = blue;
+            if (i == mainColor)
+            {
+                main.color = mainColors[i];
+                mainRight.color = mainColors[i];
+                mainLeft.color = mainColors[i];
+            }
         }
-        else if (whatColor == 3)
+        for (int i = 0; i < colors.Length; i++)
         {
-            head.color = green;
+            if (i == lowerColor)
+            {
+                lowerLeftUp.color = lowerColors[i];
+                lowerLeftDown.color = lowerColors[i];
+                lowerRightUp.color = lowerColors[i];
+                lowerRightDown.color = lowerColors[i];
+            }
         }
 
-
-
-        if (torsoColor == 1)
-        {
-            torso.color = yellow;
-        }
-        else if (torsoColor == 2)
-        {
-            torso.color = lightPink;
-        }
-        else if (torsoColor == 3)
-        {
-            torso.color = skin;
-        }
     }
 
-    public void ChangeHeadPink()
+    public void ChangeHairColor(int index)
     {
-        whatColor = 1;
+        hairColor = index;
     }
 
-    public void ChangeHeadBlue()
+    public void ChangeMainColor(int index)
     {
-        whatColor = 2;
+        mainColor = index;
     }
 
-    public void ChangeHeadGreen()
+    public void ChangeLowerColor(int index)
     {
-        whatColor = 3;
+        lowerColor = index;
     }
 
-
-    public void ChangeTorsoYellow()
-    {
-        torsoColor = 1;
-    }
-
-    public void ChangeTorsoLightPink()
-    {
-        torsoColor = 2;
-    }
-
-    public void ChangeTorsoSkin()
-    {
-        torsoColor = 3;
-    }
 }
