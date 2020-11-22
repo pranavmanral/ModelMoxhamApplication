@@ -18,13 +18,15 @@ namespace Platformer.Mechanics
         public bool atElevator = false;
         public bool canLeave = true;
 
+        internal Animator animator;
+
 
         Vector2 move;
 
         // Start is called before the first frame update
         protected override void Start()
         {
-
+            animator = GetComponent<Animator>();
         }
 
         // Update is called once per frame
@@ -33,6 +35,9 @@ namespace Platformer.Mechanics
             if(controlEnabled){
                 move.x = Input.GetAxis("Horizontal");
                 move.y = Input.GetAxis("Vertical");
+                if((move.x < 0 && transform.localScale.x > 0) ||  (move.x > 0 && transform.localScale.x < 0)) {
+                    transform.localScale = new Vector3(-1 * transform.localScale.x, transform.localScale.y,transform.localScale.z);
+                }
             }
             base.Update();
         }
@@ -44,6 +49,7 @@ namespace Platformer.Mechanics
             targetVelocity.x = move.y==0?move.x:move.x+move.y*m_tan30;
             targetVelocity.y = move.y;
             targetVelocity = targetVelocity * maxSpeed;
+            animator.SetFloat("velocityX", Mathf.Abs(targetVelocity.x) / maxSpeed);
         }
 
     }

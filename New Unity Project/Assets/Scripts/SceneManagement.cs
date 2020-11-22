@@ -10,7 +10,7 @@ public class SceneManagement : MonoBehaviour
     {
         SceneManager.LoadScene("Scene2");
         GameObject.Find("Player").GetComponent<Platformer.Mechanics.PlayerController>().controlEnabled = true;
-        GameObject.Find("Player").transform.localScale = new Vector3(0.36f,0.36f,0.36f);
+        GameObject.Find("Player").transform.localScale = new Vector3(0.25f,0.25f,0.25f);
     }
 }
 
