@@ -39,9 +39,11 @@ namespace Platformer.Mechanics
         {
              if(col.name=="Player") {
                 // Call Elevator to this level
-                elevator.GetComponent<Elevator>()._GoToLevel(level);
-                player.GetComponent<PlayerController>().atElevator = true;
-                getChild("Elevator Front Panel " + level.ToString(), "elevator_front").GetComponent<IsometricStaticObject>().floorHeight = 0.6f;
+                if(!player.GetComponent<PlayerController>().inElevator || elevator.GetComponent<Elevator>().arrived) {  
+                    elevator.GetComponent<Elevator>()._GoToLevel(level);
+                    player.GetComponent<PlayerController>().atElevator = true;
+                    getChild("Elevator Front Panel " + level.ToString(), "elevator_front").GetComponent<IsometricStaticObject>().floorHeight = 0.6f;
+                }
                 
              }
         }
