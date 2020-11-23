@@ -359,6 +359,7 @@ GameObject:
   - component: {fileID: 1133754021}
   - component: {fileID: 1133754020}
   - component: {fileID: 1133754023}
+  - component: {fileID: 1133754024}
   m_Layer: 0
   m_Name: BW_exterior_main_side
   m_TagString: Untagged
@@ -473,6 +474,18 @@ PolygonCollider2D:
       - {x: -4.7089767, y: -18.25356}
       - {x: -5.5709457, y: -18.22213}
       - {x: -5.84704, y: -18.496391}
+--- !u!114 &1133754024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133754019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d52cb56c84014756b113f8eaa5870ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1329902153
 GameObject:
   m_ObjectHideFlags: 0
