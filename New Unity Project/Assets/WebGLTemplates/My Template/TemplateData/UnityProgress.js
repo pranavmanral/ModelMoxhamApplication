@@ -7,8 +7,8 @@ function UnityProgress(unityInstance, progress) {
     }
     
 
-    createjs.CSSPlugin.install(createjs.Tween);
-    createjs.Ticker.setFPS(60);
+    //createjs.CSSPlugin.install(createjs.Tween);
+    //createjs.Ticker.setFPS(60);
 
   if (!unityInstance.Module)
     return;

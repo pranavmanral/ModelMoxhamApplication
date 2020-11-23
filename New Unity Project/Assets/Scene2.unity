@@ -47434,6 +47434,7 @@ GameObject:
   - component: {fileID: 1771316916}
   - component: {fileID: 1771316915}
   - component: {fileID: 1771316914}
+  - component: {fileID: 1771316917}
   m_Layer: 0
   m_Name: peteralexander_walls_and_floor
   m_TagString: Untagged
@@ -47519,6 +47520,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 372
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1771316917
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771316913}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 12, y: 7.32}
+    newSize: {x: 12, y: 7.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -2.5848181, y: -1.2364681}
+      - {x: -3.4077544, y: -1.6061472}
+      - {x: 10.297612, y: -1.6849538}
+      - {x: 11.311648, y: -1.2872003}
 --- !u!1 &1785419423
 GameObject:
   m_ObjectHideFlags: 0

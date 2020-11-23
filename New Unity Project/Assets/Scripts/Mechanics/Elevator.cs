@@ -18,7 +18,7 @@ namespace Platformer.Mechanics
         public bool doorOpened = false;
         public bool doorClosed = true;
         private bool animEnded = true;
-        private string currentAnim = null;
+        private string currentAnim = "DoorClose";
         GameObject currentElevatorFrontPanel;
         private int currentLevel=0;
         public bool levelSelected = false;
@@ -32,7 +32,7 @@ namespace Platformer.Mechanics
             //anim = GetComponent<Animator>();      
             currentElevatorFrontPanel = GameObject.Find("Elevator Front Panel " + currentLevel.ToString());
             anim = currentElevatorFrontPanel.GetComponent<Animator>();
-
+            _GoToLevel(0);
         }
         
         public void _GoToLevel(int level) {
@@ -42,6 +42,7 @@ namespace Platformer.Mechanics
             animEnded = false;
             anim.enabled=true;
             */
+            
             if(!doorClosed) {
                 if(anim.GetCurrentAnimatorStateInfo(0).IsName("DoorOpen")) {
                     anim.Play("Base Layer.DoorClose", 0, 1.0f-anim.GetCurrentAnimatorStateInfo(0).normalizedTime);
@@ -138,7 +139,9 @@ namespace Platformer.Mechanics
             }    
         
             if(doorClosed) {
-            
+                if(player.GetComponent<Platformer.Mechanics.PlayerController>().inElevator) {
+                    player.GetComponent<Platformer.Mechanics.PlayerController>().controlEnabled = false;
+                }
                 currentElevatorFrontPanel = GameObject.Find("Elevator Front Panel " + currentLevel.ToString());
                 anim = currentElevatorFrontPanel.GetComponent<Animator>();
                 player.GetComponent<PlayerController>().canLeave = false;
@@ -151,6 +154,7 @@ namespace Platformer.Mechanics
                     // Swap the position of the cylinder.
                     this.transform.position = target.position;
                     arrived = true;
+                    player.GetComponent<Platformer.Mechanics.PlayerController>().controlEnabled = true;
                     if(player.GetComponent<PlayerController>().inElevator) {
                         player.GetComponent<PlayerController>().atElevator = true;
                     }
