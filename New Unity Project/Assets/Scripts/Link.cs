@@ -22,6 +22,9 @@ public class Link : MonoBehaviour
 		#if !UNITY_EDITOR
 		openWindow(URL);
 		#endif
+        if(GameObject.Find("TutorialManager").GetComponent<TutorialManager>().page == 3){
+            GameObject.Find("TutorialManager").GetComponent<TutorialManager>().ManagePage(4);
+        }
 	}
 
 	[DllImport("__Internal")]

@@ -15,7 +15,7 @@ public class ExteriorEntrance : MonoBehaviour
         {
              if(col.name=="Player") {
                 SceneManager.LoadScene("Scene2");
-                GetComponent<Link>().OpenLinkJSPlugin();
+                GameObject.Find("TutorialManager").GetComponent<TutorialManager>().ManagePage(2);
              }
         }
 

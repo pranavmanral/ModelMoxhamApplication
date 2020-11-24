@@ -88,6 +88,9 @@ namespace Platformer.Mechanics
                 if (show)
                 {
                     elevatorUI.gameObject.SetActive(true);
+                    if(GameObject.Find("TutorialManager").GetComponent<TutorialManager>().page == 2){
+                        GameObject.Find("TutorialManager").GetComponent<TutorialManager>().ManagePage(3);
+                    }
                 }
                 else
                 {
