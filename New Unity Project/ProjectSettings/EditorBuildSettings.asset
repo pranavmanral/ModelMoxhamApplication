@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene3B.unity
     guid: 8b9d520a3904a4450a94d45f22e44e2f
+  - enabled: 1
+    path: Assets/Scene3C.unity
+    guid: 417d22b5247e24ba3b9f40e6077da417
+  - enabled: 1
+    path: Assets/Scene3D.unity
+    guid: f92b5fd13dc8c4eb2983c5ba4a41ff56
   m_configObjects: {}

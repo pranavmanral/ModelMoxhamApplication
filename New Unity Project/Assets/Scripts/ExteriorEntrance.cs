@@ -14,7 +14,7 @@ public class ExteriorEntrance : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
         {
              if(col.name=="Player") {
-                SceneManager.LoadScene("Scene3B");
+                SceneManager.LoadScene("Scene3D");
                 GameObject.Find("TutorialManager").GetComponent<TutorialManager>().ManagePage(2);
              }
         }
