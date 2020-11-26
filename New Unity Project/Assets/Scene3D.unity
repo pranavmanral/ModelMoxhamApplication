@@ -728,7 +728,7 @@ GameObject:
   - component: {fileID: 110870317}
   - component: {fileID: 110870318}
   m_Layer: 0
-  m_Name: SpawnPoint
+  m_Name: SpawnPoint1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -742,7 +742,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 110870316}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -27.8, y: 0.1, z: -5961.45}
+  m_LocalPosition: {x: -27.24, y: -2.42, z: -5961.45}
   m_LocalScale: {x: 1.0055891, y: 1.0055891, z: 1.0055891}
   m_Children: []
   m_Father: {fileID: 775178301}
@@ -757,9 +757,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 110870316}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766b7ba58ad5b4512a94a780197e83de, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b2670006eb924a2f9f1019d359c66a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextScene: 
+  spawnPoint: 
 --- !u!1 &121516805
 GameObject:
   m_ObjectHideFlags: 0
@@ -3160,6 +3162,7 @@ Transform:
   - {fileID: 1069786916}
   - {fileID: 1393158057}
   - {fileID: 110870317}
+  - {fileID: 1501614205}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3549,6 +3552,8 @@ GameObject:
   - component: {fileID: 1069786916}
   - component: {fileID: 1069786915}
   - component: {fileID: 1069786917}
+  - component: {fileID: 1069786919}
+  - component: {fileID: 1069786918}
   m_Layer: 0
   m_Name: entranceH
   m_TagString: Untagged
@@ -3634,6 +3639,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorHeight: 1
   isStatic: 1
+--- !u!70 &1069786918
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069786914}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 3.890211, y: -0.39696923}
+  m_Size: {x: 4.1500535, y: 1.1331803}
+  m_Direction: 1
+--- !u!114 &1069786919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069786914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2670006eb924a2f9f1019d359c66a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextScene: Scene2
+  spawnPoint: SpawnPoint4
 --- !u!1 &1091801904
 GameObject:
   m_ObjectHideFlags: 0
@@ -4701,6 +4736,8 @@ GameObject:
   - component: {fileID: 1392885832}
   - component: {fileID: 1392885831}
   - component: {fileID: 1392885833}
+  - component: {fileID: 1392885835}
+  - component: {fileID: 1392885834}
   m_Layer: 0
   m_Name: entranceG_corridor
   m_TagString: Untagged
@@ -4786,6 +4823,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorHeight: 1
   isStatic: 1
+--- !u!114 &1392885834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392885830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2670006eb924a2f9f1019d359c66a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextScene: Scene3C
+  spawnPoint: SpawnPoint2
+--- !u!70 &1392885835
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392885830}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -2.430358, y: -1.2434388}
+  m_Size: {x: 2.129311, y: 0.88586295}
+  m_Direction: 1
 --- !u!1 &1393158054
 GameObject:
   m_ObjectHideFlags: 0
@@ -5266,6 +5333,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorHeight: 0
   isStatic: 1
+--- !u!1 &1501614204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1501614205}
+  - component: {fileID: 1501614206}
+  m_Layer: 0
+  m_Name: SpawnPoint2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1501614205
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501614204}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.09, y: -5.73, z: -5961.45}
+  m_LocalScale: {x: 1.0055891, y: 1.0055891, z: 1.0055891}
+  m_Children: []
+  m_Father: {fileID: 775178301}
+  m_RootOrder: 77
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1501614206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501614204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2670006eb924a2f9f1019d359c66a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextScene: 
+  spawnPoint: 
 --- !u!1 &1533932977
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,7 +16,7 @@ public class TutorialManager : MonoBehaviour
     GameObject helpButton;
     GameObject player;
     public int page = 0;
-    private static bool created = false;
+    private static bool createdTutManager = false;
 
     // Start is called before the first frame update
     void Start()
@@ -29,15 +29,15 @@ public class TutorialManager : MonoBehaviour
         redArrowLifts = GameObject.Find("red_arrow (Lifts)");
         redArrowEntrance = GameObject.Find("red_arrow (Entrance)");
         helpButton = GameObject.Find("HelpButton");
-        liftsPage.active = false;
-        enteringStorePage.active = false;
-        endPage.active = false;
-        redArrowLifts.active = false;
-        redArrowEntrance.active = false;
+        liftsPage.SetActive(false);
+        enteringStorePage.SetActive(false);
+        endPage.SetActive(false);
+        redArrowLifts.SetActive(false);
+        redArrowEntrance.SetActive(false);
         player = GameObject.Find("Player");
-        welcomePage.active = false;
-        movingPage.active = false;
-        helpButton.active = false;
+        welcomePage.SetActive(false);
+        movingPage.SetActive(false);
+        helpButton.SetActive(false);
     }
 
     // Update is called once per frame
@@ -48,10 +48,10 @@ public class TutorialManager : MonoBehaviour
     
     void Awake()
     {
-        if (!created)
+        if (!createdTutManager)
         {
             DontDestroyOnLoad(this.gameObject);
-            created = true;
+            createdTutManager = true;
         }
         else
         {
@@ -72,31 +72,31 @@ public class TutorialManager : MonoBehaviour
         page = num;
         switch (num) {
             case 0:
-                welcomePage.active = true;
+                welcomePage.SetActive(true);
                 break;
             case 1:
-                welcomePage.active = false;
-                movingPage.active = true;
-                redArrowEntrance.active = true;
+                welcomePage.SetActive(false);
+                movingPage.SetActive(true);
+                redArrowEntrance.SetActive(true);
                 break;
             case 2:
-                movingPage.active = false;
-                redArrowEntrance.active = false;
-                liftsPage.active = true;
-                redArrowLifts.active = true;
+                movingPage.SetActive(false);
+                redArrowEntrance.SetActive(false);
+                liftsPage.SetActive(true);
+                redArrowLifts.SetActive(true);
                 break;
             case 3:
-                liftsPage.active = false;
-                redArrowLifts.active = false;
-                enteringStorePage.active = true;
+                liftsPage.SetActive(false);
+                redArrowLifts.SetActive(false);
+                enteringStorePage.SetActive(true);
                 break;
             case 4:
-                enteringStorePage.active = false;
-                endPage.active = true;
+                enteringStorePage.SetActive(false);
+                endPage.SetActive(true);
                 break;
             case 5:
-                endPage.active = false;
-                helpButton.active = true;
+                endPage.SetActive(false);
+                helpButton.SetActive(true);
                 break;
             default:
                 break;

@@ -125,6 +125,7 @@ namespace Platformer.Mechanics
                 // Call Elevator to this level
                 player.GetComponent<PlayerController>().inElevator = false;
                 player.transform.parent = null;
+                DontDestroyOnLoad(Transition.instance);
                 //getChild("Elevator Front Panel " + currentLevel.ToString(), "elevator_front").GetComponent<IsometricStaticObject>().floorHeight = 0.6f;
 
              }

@@ -225,6 +225,7 @@ Transform:
   - {fileID: 1346016670}
   - {fileID: 1006796868}
   - {fileID: 1033390660}
+  - {fileID: 404249764}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -458,6 +459,36 @@ PolygonCollider2D:
       - {x: -9.57527, y: -5.8566732}
       - {x: -0.62598586, y: -1.5426948}
       - {x: 4.4633226, y: -4.150675}
+--- !u!1 &404249763
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 404249764}
+  m_Layer: 0
+  m_Name: SpawnPoint2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &404249764
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404249763}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 14.5, y: -8.1, z: -2295.7773}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 245473228}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &419526061
 GameObject:
   m_ObjectHideFlags: 0
@@ -760,9 +791,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 703942371}
-  - component: {fileID: 703942372}
   m_Layer: 0
-  m_Name: SpawnPoint
+  m_Name: SpawnPoint1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -776,24 +806,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 703942370}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.120967, y: -9.354851, z: -2295.7773}
+  m_LocalPosition: {x: -7.2, y: -10.4, z: -2295.7773}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 245473228}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &703942372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 703942370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766b7ba58ad5b4512a94a780197e83de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &765550575
 GameObject:
   m_ObjectHideFlags: 0
@@ -1338,6 +1356,8 @@ GameObject:
   - component: {fileID: 1213356509}
   - component: {fileID: 1213356508}
   - component: {fileID: 1213356510}
+  - component: {fileID: 1213356512}
+  - component: {fileID: 1213356511}
   m_Layer: 0
   m_Name: middle_bit_corridor (2)
   m_TagString: Untagged
@@ -1423,6 +1443,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorHeight: 2
   isStatic: 1
+--- !u!114 &1213356511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213356507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2670006eb924a2f9f1019d359c66a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextScene: Scene3A
+  spawnPoint: SpawnPoint2
+--- !u!70 &1213356512
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213356507}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.4461819, y: -1.6389961}
+  m_Size: {x: 2.4676487, y: 0.92507535}
+  m_Direction: 1
 --- !u!1 &1346016669
 GameObject:
   m_ObjectHideFlags: 0
@@ -1755,6 +1805,8 @@ GameObject:
   - component: {fileID: 1839241728}
   - component: {fileID: 1839241727}
   - component: {fileID: 1839241729}
+  - component: {fileID: 1839241731}
+  - component: {fileID: 1839241730}
   m_Layer: 0
   m_Name: middle_bit_corridor (1)
   m_TagString: Untagged
@@ -1840,6 +1892,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorHeight: 1
   isStatic: 1
+--- !u!70 &1839241730
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839241726}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 2.6995363, y: -1.5184791}
+  m_Size: {x: 2.0820127, y: 0.78045326}
+  m_Direction: 1
+--- !u!114 &1839241731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839241726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2670006eb924a2f9f1019d359c66a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextScene: Scene2
+  spawnPoint: SpawnPoint2
 --- !u!1 &1880182239
 GameObject:
   m_ObjectHideFlags: 0
