@@ -71,6 +71,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8689443871541949759}
   - component: {fileID: 943983712787004791}
+  - component: {fileID: 7713256500659470371}
   m_Layer: 0
   m_Name: NewPlayer
   m_TagString: Untagged
@@ -134,6 +135,25 @@ MonoBehaviour:
     showGizmo: 1
   - color: {r: 0, g: 1, b: 0, a: 1}
     showGizmo: 1
+--- !u!95 &7713256500659470371
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602680335219205725}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 30cb6381b19d448eba1c1e07ac45ca09, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &653445156198853356
 GameObject:
   m_ObjectHideFlags: 0

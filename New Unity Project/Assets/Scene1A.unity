@@ -2219,6 +2219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1047613521}
   - component: {fileID: 1047613520}
+  - component: {fileID: 1047613522}
   m_Layer: 0
   m_Name: SceneLoader
   m_TagString: Untagged
@@ -2238,6 +2239,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7d001243d23443cabae13b2c7812de9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Scene1A_Music: {fileID: 8300000, guid: 909385e27f47a4841904c085e7079f52, type: 3}
+  Scene2_Music: {fileID: 8300000, guid: 72df92fb90c0644009e905afefe37920, type: 3}
+  Scene3A_Music: {fileID: 8300000, guid: 45b245b22f9d245b292dd8604720ccd0, type: 3}
+  Scene3B_Music: {fileID: 8300000, guid: cfd6efadb46c34a4b98aa7599d1758de, type: 3}
+  Scene3C_Music: {fileID: 8300000, guid: 6677ab83438d04a36b8eede0f0a25144, type: 3}
+  Scene3D_Music: {fileID: 8300000, guid: 82701f938785141bdad9814fa18d00db, type: 3}
+  Scene3E_Music: {fileID: 8300000, guid: 6c499e44d8a764c2d8a346a467e56f88, type: 3}
+  Elevator_Music: {fileID: 8300000, guid: cc705523baede453f9d0932aa432237e, type: 3}
 --- !u!4 &1047613521
 Transform:
   m_ObjectHideFlags: 0
@@ -2252,6 +2261,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1047613522
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047613519}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 909385e27f47a4841904c085e7079f52, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1056026851
 GameObject:
   m_ObjectHideFlags: 0
@@ -2556,10 +2661,10 @@ PolygonCollider2D:
       - {x: 46.218742, y: -45.003918}
       - {x: 43.64616, y: -44.953415}
       - {x: 42.14949, y: -45.69178}
-    - - {x: 49.121307, y: -43.671326}
+    - - {x: 49.175316, y: -44.076412}
       - {x: 50.525436, y: -42.307224}
       - {x: 40.12451, y: -42.017963}
-      - {x: 37.609028, y: -43.58824}
+      - {x: 36.123695, y: -44.10136}
     - - {x: -48.484947, y: -54.289368}
       - {x: -40.888424, y: -45.790016}
       - {x: -46.496387, y: -45.997646}
@@ -2823,10 +2928,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -5.3752804, y: -18.674732}
-      - {x: -4.7089767, y: -18.25356}
-      - {x: -5.5709457, y: -18.22213}
-      - {x: -5.84704, y: -18.496391}
+    - - {x: -5.4261684, y: -18.674732}
+      - {x: -5.1033497, y: -18.342611}
+      - {x: -5.7999363, y: -18.28574}
+      - {x: -6.177805, y: -18.610888}
 --- !u!114 &1133754024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4407,7 +4512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcbb35ebb2413417aaf4944f8f0b054f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floorHeight: 0.8
+  floorHeight: 0.9
   isStatic: 1
 --- !u!212 &1790753241
 SpriteRenderer:

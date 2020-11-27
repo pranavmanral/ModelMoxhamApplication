@@ -22,7 +22,8 @@ namespace Platformer.Mechanics
         GameObject currentElevatorFrontPanel;
         private int currentLevel=0;
         public bool levelSelected = false;
-
+        bool playingElevatorMusic = false;
+        bool playingScene2Music = true;
         
         
         
@@ -165,9 +166,21 @@ namespace Platformer.Mechanics
         
             if(player.GetComponent<Platformer.Mechanics.PlayerController>().inElevator == true) {
                 _ToggleElevatorMenu(show: true);
+                if(!playingElevatorMusic) {
+                    GameObject.Find("SceneLoader").GetComponent<AudioSource>().clip = GameObject.Find("SceneLoader").GetComponent<SpawnManager>().Elevator_Music;
+                    GameObject.Find("SceneLoader").GetComponent<AudioSource>().Play();
+                    playingElevatorMusic = true;
+                    playingScene2Music = false;
+                }
             }
             else {
                 _ToggleElevatorMenu(show: false);
+                if(!playingScene2Music) {
+                    GameObject.Find("SceneLoader").GetComponent<AudioSource>().clip = GameObject.Find("SceneLoader").GetComponent<SpawnManager>().Scene2_Music;
+                    GameObject.Find("SceneLoader").GetComponent<AudioSource>().Play();
+                    playingScene2Music = true;
+                    playingElevatorMusic = false;
+                }
             }    
         
             if(doorClosed) {

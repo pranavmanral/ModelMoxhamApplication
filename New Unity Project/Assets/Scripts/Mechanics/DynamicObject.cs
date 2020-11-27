@@ -180,7 +180,8 @@ namespace Platformer.Mechanics
                 }
             }
             */
-            body.position = body.position + move.normalized * distance;
+            //body.position = body.position + move.normalized * distance;
+            body.MovePosition(body.position + move.normalized * distance);
         }
 
     }

@@ -544,7 +544,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 340273102}
-  - component: {fileID: 340273103}
   m_Layer: 0
   m_Name: SpawnPoint2
   m_TagString: Untagged
@@ -566,20 +565,6 @@ Transform:
   m_Father: {fileID: 551155295}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &340273103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 340273101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b2670006eb924a2f9f1019d359c66a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextScene: 
-  spawnPoint: 
 --- !u!1 &551155294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1783,7 +1768,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1899871488}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.389053, y: 29.807196, z: -50}
+  m_LocalPosition: {x: 30.211163, y: 29.807196, z: -50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2009,7 +1994,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2138566435}
-  - component: {fileID: 2138566436}
   m_Layer: 0
   m_Name: SpawnPoint1
   m_TagString: Untagged
@@ -2031,17 +2015,3 @@ Transform:
   m_Father: {fileID: 551155295}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2138566436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2138566434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b2670006eb924a2f9f1019d359c66a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextScene: 
-  spawnPoint: 

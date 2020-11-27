@@ -10,13 +10,20 @@ public class SpawnManager : MonoBehaviour
     private static bool created = false;
     string point = null;
     float elevatorY;
-
-
+    public AudioClip Scene1A_Music;
+    public AudioClip Scene2_Music;
+    public AudioClip Scene3A_Music;
+    public AudioClip Scene3B_Music;
+    public AudioClip Scene3C_Music;
+    public AudioClip Scene3D_Music;
+    public AudioClip Scene3E_Music;
+    public AudioClip Elevator_Music;
+    public AudioSource audioSource;
+    
     // Start is called before the first frame update
     void Start()
     {
             GameObject.Find("Player").transform.localScale = new Vector3(0.2f,0.2f,0.2f);
-
     }
     
     void Awake()
@@ -77,6 +84,40 @@ public class SpawnManager : MonoBehaviour
                 GameObject.Find("Elevator").transform.position = new Vector3(GameObject.Find("Elevator").transform.position.x, elevatorY, GameObject.Find("Elevator").transform.position.z);
                 GameObject.Find("Elevator").GetComponent<Platformer.Mechanics.Elevator>().targetY = elevatorY;
             }
+         }
+         audioSource = GetComponent<AudioSource>();
+
+         switch(scene.name) {
+
+            case "Scene1A":
+                audioSource.clip = Scene1A_Music;
+                audioSource.Play();
+                break;
+            case "Scene2":
+                audioSource.clip = Scene2_Music;
+                audioSource.Play();
+                break;
+            case "Scene3A":
+                audioSource.clip = Scene3A_Music;
+                audioSource.Play();
+                break;
+            case "Scene3B":
+                audioSource.clip = Scene3B_Music;
+                audioSource.Play();
+                break;
+            case "Scene3C":
+                audioSource.clip = Scene3C_Music;
+                audioSource.Play();
+                break;
+            case "Scene3D":
+                audioSource.clip = Scene3D_Music;
+                audioSource.Play();
+                break;
+            case "Scene3E":
+                audioSource.clip = Scene3E_Music; 
+                audioSource.Play();
+                break;
+         
          }
      }
 }
