@@ -14,6 +14,8 @@ public class Preferences : MonoBehaviour
     private static bool created = false;
     GameObject cautionText;
     GameObject cautionBg;
+    GameObject audioButton;
+    GameObject mutedButton;
 
     public delegate void ChangeElevatorEvent (float elevatorSpeed); //I do declare!
     public static event ChangeElevatorEvent changeElevatorEvent;  // create an event variable 
@@ -92,8 +94,13 @@ public class Preferences : MonoBehaviour
  // Then you subscribe to the even from any class. and if the event is triggered (changed) then your other class will be notified.
  
  
+   public void haveSound(bool yes) {
+
+        audioButton.SetActive(yes);
+        mutedButton.SetActive(!yes);
+        GameObject.Find("SceneLoader").GetComponent<AudioSource>().mute = !yes;
+   }
    
- 
     void Awake()
     {
         if (!created)
@@ -115,6 +122,13 @@ public class Preferences : MonoBehaviour
         
         cautionText.SetActive(false);
         cautionBg.SetActive(false);
+        
+        
+        audioButton = GameObject.Find("AudioButton");
+        mutedButton = GameObject.Find("MutedButton");
+        
+        audioButton.SetActive(true);
+        mutedButton.SetActive(false);
     }
 
     // Update is called once per frame
