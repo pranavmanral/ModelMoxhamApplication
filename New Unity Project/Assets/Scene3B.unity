@@ -499,6 +499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 419526063}
   - component: {fileID: 419526062}
+  - component: {fileID: 419526064}
   m_Layer: 0
   m_Name: stars
   m_TagString: Untagged
@@ -570,6 +571,20 @@ Transform:
   m_Father: {fileID: 245473228}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &419526064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419526061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcbb35ebb2413417aaf4944f8f0b054f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floorHeight: 0
+  isStatic: 1
 --- !u!1 &457751204
 GameObject:
   m_ObjectHideFlags: 0

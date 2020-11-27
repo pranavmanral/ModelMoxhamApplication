@@ -43,7 +43,16 @@ public class Preferences : MonoBehaviour
             colors.highlightedColor = Color.red;
             colors.pressedColor = Color.red;
             colors.selectedColor = Color.red;
-            walkSlider.colors = colors;     
+            walkSlider.colors = colors;   
+            var fill = (walkSlider as UnityEngine.UI.Slider).GetComponentsInChildren<UnityEngine.UI.Image>().FirstOrDefault(t => t.name == "Fill");
+            var background = (walkSlider as UnityEngine.UI.Slider).GetComponentsInChildren<UnityEngine.UI.Image>().FirstOrDefault(t => t.name == "Background");
+            if (fill != null)
+            {
+                fill.color = Color.red;
+            }
+            if (background != null) {
+                background.color = Color.red;
+            }
         }
         else {
             cautionText.SetActive(false);
@@ -54,6 +63,15 @@ public class Preferences : MonoBehaviour
             colors.pressedColor = Color.white;
             colors.selectedColor = Color.white;
             walkSlider.colors = colors;
+            var fill = (walkSlider as UnityEngine.UI.Slider).GetComponentsInChildren<UnityEngine.UI.Image>().FirstOrDefault(t => t.name == "Fill");
+            var background = (walkSlider as UnityEngine.UI.Slider).GetComponentsInChildren<UnityEngine.UI.Image>().FirstOrDefault(t => t.name == "Background");
+            if (fill != null)
+            {
+                fill.color = Color.white;
+            }
+            if (background != null) {
+                background.color = Color.white;
+            }
         }
     
         walkSpeed = walkSlider.value + 0.0f;
