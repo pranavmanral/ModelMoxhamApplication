@@ -433,7 +433,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 33.200012, y: -37.799973}
+  m_AnchoredPosition: {x: 33.200073, y: -37.799988}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &205784462
@@ -2308,7 +2308,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 33.200012, y: -37.800003}
+  m_AnchoredPosition: {x: 33.200073, y: -37.799988}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &988503707
@@ -2507,7 +2507,7 @@ MonoBehaviour:
   Scene3D_Music: {fileID: 8300000, guid: 82701f938785141bdad9814fa18d00db, type: 3}
   Scene3E_Music: {fileID: 8300000, guid: 6c499e44d8a764c2d8a346a467e56f88, type: 3}
   Elevator_Music: {fileID: 8300000, guid: cc705523baede453f9d0932aa432237e, type: 3}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1047613522}
 --- !u!4 &1047613521
 Transform:
   m_ObjectHideFlags: 0
@@ -2534,7 +2534,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 909385e27f47a4841904c085e7079f52, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.701
   m_Pitch: 1
   Loop: 1
   Mute: 0

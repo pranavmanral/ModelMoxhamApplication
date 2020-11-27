@@ -98,7 +98,12 @@ public class Preferences : MonoBehaviour
 
         audioButton.SetActive(yes);
         mutedButton.SetActive(!yes);
-        GameObject.Find("SceneLoader").GetComponent<AudioSource>().mute = !yes;
+        if(yes) {
+            GameObject.Find("SceneLoader").GetComponent<AudioSource>().Play();
+        }
+        else {
+            GameObject.Find("SceneLoader").GetComponent<AudioSource>().Pause();
+        }
    }
    
     void Awake()
