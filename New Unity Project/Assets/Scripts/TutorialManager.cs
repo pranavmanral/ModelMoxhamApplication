@@ -14,6 +14,7 @@ public class TutorialManager : MonoBehaviour
     GameObject redArrowLifts;
     GameObject redArrowEntrance;
     GameObject helpButton;
+    GameObject skipTutorialButton;
     GameObject player;
     public int page = 0;
     private static bool createdTutManager = false;
@@ -29,6 +30,7 @@ public class TutorialManager : MonoBehaviour
         redArrowLifts = GameObject.Find("red_arrow (Lifts)");
         redArrowEntrance = GameObject.Find("red_arrow (Entrance)");
         helpButton = GameObject.Find("HelpButton");
+        skipTutorialButton = GameObject.Find("SkipTutorialButton");
         liftsPage.SetActive(false);
         enteringStorePage.SetActive(false);
         endPage.SetActive(false);
@@ -38,6 +40,7 @@ public class TutorialManager : MonoBehaviour
         welcomePage.SetActive(false);
         movingPage.SetActive(false);
         helpButton.SetActive(false);
+        skipTutorialButton.SetActive(false);
     }
 
     // Update is called once per frame
@@ -59,7 +62,17 @@ public class TutorialManager : MonoBehaviour
         }
     }
     
-    public  void LetsDoIt() {
+    public void SkipTutorial() {
+        Debug.Log(page);
+        skipTutorialButton.SetActive(false);
+        player.GetComponent<Platformer.Mechanics.PlayerController>().controlEnabled = true;
+        while(page < 5) {
+            ManagePage(page + 1);
+            Debug.Log(page);
+        }
+    }
+    
+    public void LetsDoIt() {
         player.GetComponent<Platformer.Mechanics.PlayerController>().controlEnabled = true;
         ManagePage(1);
     }
@@ -73,6 +86,7 @@ public class TutorialManager : MonoBehaviour
         switch (num) {
             case 0:
                 welcomePage.SetActive(true);
+                skipTutorialButton.SetActive(true);
                 break;
             case 1:
                 welcomePage.SetActive(false);
@@ -97,6 +111,7 @@ public class TutorialManager : MonoBehaviour
             case 5:
                 endPage.SetActive(false);
                 helpButton.SetActive(true);
+                skipTutorialButton.SetActive(false);
                 break;
             default:
                 break;

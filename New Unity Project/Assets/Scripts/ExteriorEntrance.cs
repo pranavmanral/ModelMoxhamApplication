@@ -14,7 +14,9 @@ public class ExteriorEntrance : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
         {
              if(col.name=="Player") {
-                GameObject.Find("TutorialManager").GetComponent<TutorialManager>().ManagePage(2);
+                if(GameObject.Find("TutorialManager").GetComponent<TutorialManager>().page < 5) {
+                    GameObject.Find("TutorialManager").GetComponent<TutorialManager>().ManagePage(2);
+                }
              }
         }
 

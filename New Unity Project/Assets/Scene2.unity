@@ -34731,6 +34731,7 @@ GameObject:
   - component: {fileID: 948918847}
   - component: {fileID: 948918846}
   - component: {fileID: 948918850}
+  - component: {fileID: 948918851}
   m_Layer: 0
   m_Name: archway3
   m_TagString: Untagged
@@ -34869,6 +34870,20 @@ CapsuleCollider2D:
   m_Offset: {x: 2.0993476, y: -0.3688068}
   m_Size: {x: 1.7233169, y: 0.39562064}
   m_Direction: 1
+--- !u!114 &948918851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948918845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2670006eb924a2f9f1019d359c66a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextScene: Scene3D
+  spawnPoint: SpawnPoint2
 --- !u!1 &956651557
 GameObject:
   m_ObjectHideFlags: 0
