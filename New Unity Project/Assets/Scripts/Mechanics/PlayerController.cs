@@ -14,7 +14,6 @@ namespace Platformer.Mechanics
         public bool controlEnabled = false;
         public bool inElevator = false;
         
-        private bool canEnter = false;
         public bool atElevator = false;
         public bool canLeave = true;
 
@@ -41,6 +40,21 @@ namespace Platformer.Mechanics
             }
             base.Update();
         }
+        
+        protected override void OnEnable(){
+          Preferences.changeWalkEvent += WalkSpeedChanged; // subscribing to the event. 
+          base.OnEnable();
+       }
+
+       protected override void OnDisable(){
+          Preferences.changeWalkEvent -= WalkSpeedChanged; // subscribing to the event.
+            base.OnEnable();
+       }
+
+
+       void WalkSpeedChanged(float newWalkSpeed){
+          maxSpeed = newWalkSpeed;
+       }
         
         protected override void ComputeVelocity()
         {

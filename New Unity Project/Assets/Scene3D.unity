@@ -1401,7 +1401,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 318057543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.194107, y: 34.195496, z: -50}
+  m_LocalPosition: {x: 34.610943, y: 34.195488, z: -50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3668,7 +3668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextScene: Scene2
-  spawnPoint: SpawnPoint4
+  spawnPoint: SpawnPoint5
 --- !u!1 &1091801904
 GameObject:
   m_ObjectHideFlags: 0

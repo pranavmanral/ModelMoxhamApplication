@@ -63,12 +63,10 @@ public class TutorialManager : MonoBehaviour
     }
     
     public void SkipTutorial() {
-        Debug.Log(page);
         skipTutorialButton.SetActive(false);
         player.GetComponent<Platformer.Mechanics.PlayerController>().controlEnabled = true;
         while(page < 5) {
             ManagePage(page + 1);
-            Debug.Log(page);
         }
     }
     

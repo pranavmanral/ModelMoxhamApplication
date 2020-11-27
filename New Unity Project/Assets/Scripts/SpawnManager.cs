@@ -9,6 +9,7 @@ public class SpawnManager : MonoBehaviour
     
     private static bool created = false;
     string point = null;
+    float elevatorY;
 
 
     // Start is called before the first frame update
@@ -38,6 +39,9 @@ public class SpawnManager : MonoBehaviour
     
     public void LoadScene(string sceneToLoad, string spawnPoint) {
         point = spawnPoint;
+        if(SceneManager.GetActiveScene().name == "Scene2") {
+            elevatorY = GameObject.Find("Elevator").transform.position.y;
+        }
         SceneManager.LoadScene(sceneToLoad);
     }
     /*
@@ -65,6 +69,13 @@ public class SpawnManager : MonoBehaviour
          Debug.Log(mode);*/
          if(point != null) {
             GameObject.Find("Player").transform.position = GameObject.Find(point).transform.position; //Spawn player here
+            if(scene.name == "Scene1A") {
+                GameObject.Find("FirstLoad").GetComponent<FirstLoad>().isFirstLoad = false;
+            }
+            else if(scene.name == "Scene2") {
+                GameObject.Find("Elevator").transform.position = new Vector3(GameObject.Find("Elevator").transform.position.x, elevatorY, GameObject.Find("Elevator").transform.position.z);
+                GameObject.Find("Elevator").GetComponent<Platformer.Mechanics.Elevator>().targetY = elevatorY;
+            }
          }
      }
 }

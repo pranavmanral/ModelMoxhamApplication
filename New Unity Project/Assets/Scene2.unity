@@ -4162,6 +4162,8 @@ GameObject:
   - component: {fileID: 108957765}
   - component: {fileID: 108957764}
   - component: {fileID: 108957763}
+  - component: {fileID: 108957767}
+  - component: {fileID: 108957768}
   m_Layer: 0
   m_Name: archway4
   m_TagString: Untagged
@@ -4284,6 +4286,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 476
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &108957767
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108957762}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.8443197, y: -0.44061092}
+  m_Size: {x: 0.97298765, y: 0.30232462}
+  m_Direction: 1
+--- !u!114 &108957768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108957762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2670006eb924a2f9f1019d359c66a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextScene: Scene3D
+  spawnPoint: SpawnPoint2
 --- !u!1 &110051308
 GameObject:
   m_ObjectHideFlags: 0
@@ -16563,7 +16595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b2670006eb924a2f9f1019d359c66a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Scene3A
+  nextScene: Scene1A
   spawnPoint: SpawnPoint1
 --- !u!1 &433427086
 GameObject:
@@ -20139,7 +20171,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 517832350}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.6, y: 7.65, z: 0}
+  m_LocalPosition: {x: 22.21, y: 11.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -29254,8 +29286,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b2670006eb924a2f9f1019d359c66a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Scene3C
-  spawnPoint: SpawnPoint1
+  nextScene: Scene3E
+  spawnPoint: SpawnPoint2
 --- !u!1 &769694128
 GameObject:
   m_ObjectHideFlags: 0
@@ -34064,8 +34096,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b2670006eb924a2f9f1019d359c66a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Scene3B
-  spawnPoint: SpawnPoint2
+  nextScene: Scene3A
+  spawnPoint: SpawnPoint1
 --- !u!70 &922404795
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -34882,8 +34914,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b2670006eb924a2f9f1019d359c66a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Scene3D
-  spawnPoint: SpawnPoint2
+  nextScene: Scene3C
+  spawnPoint: SpawnPoint1
 --- !u!1 &956651557
 GameObject:
   m_ObjectHideFlags: 0

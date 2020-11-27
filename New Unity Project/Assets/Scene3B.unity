@@ -1905,8 +1905,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.6995363, y: -1.5184791}
-  m_Size: {x: 2.0820127, y: 0.78045326}
+  m_Offset: {x: 4.3744984, y: -2.3398974}
+  m_Size: {x: 1.7611443, y: 0.60076666}
   m_Direction: 1
 --- !u!114 &1839241731
 MonoBehaviour:
@@ -1920,8 +1920,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b2670006eb924a2f9f1019d359c66a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Scene2
-  spawnPoint: SpawnPoint2
+  nextScene: Scene3E
+  spawnPoint: SpawnPoint1
 --- !u!1 &1880182239
 GameObject:
   m_ObjectHideFlags: 0

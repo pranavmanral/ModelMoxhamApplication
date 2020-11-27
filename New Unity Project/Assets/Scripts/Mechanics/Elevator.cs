@@ -10,7 +10,7 @@ namespace Platformer.Mechanics
     
         GameObject player;
         GameObject elevatorUI;
-        float targetY = -0.291f;
+        public float targetY = -3.77f;
         private Transform target;
         public float speed = 1.0f;
         public bool arrived = false;
@@ -22,6 +22,9 @@ namespace Platformer.Mechanics
         GameObject currentElevatorFrontPanel;
         private int currentLevel=0;
         public bool levelSelected = false;
+
+        
+        
         
         // Start is called before the first frame update
         void Start()
@@ -31,9 +34,23 @@ namespace Platformer.Mechanics
             target = GameObject.Find("LevelTarget").transform;
             //anim = GetComponent<Animator>();      
             currentElevatorFrontPanel = GameObject.Find("Elevator Front Panel " + currentLevel.ToString());
-            anim = currentElevatorFrontPanel.GetComponent<Animator>();
-            _GoToLevel(0);
+            anim = currentElevatorFrontPanel.GetComponent<Animator>();       
+            speed = GameObject.Find("Preferences").GetComponent<Preferences>().elevatorSpeed;
         }
+        
+        
+        void OnEnable(){
+          Preferences.changeElevatorEvent += ElevatorSpeedChanged; // subscribing to the event. 
+       }
+
+       void OnDisable(){
+          Preferences.changeElevatorEvent -= ElevatorSpeedChanged; // subscribing to the event. 
+       }
+
+
+       void ElevatorSpeedChanged(float newElevatorSpeed){
+          speed = newElevatorSpeed;
+       }
         
         public void _GoToLevel(int level) {
         
