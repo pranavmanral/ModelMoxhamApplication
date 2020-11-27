@@ -36,20 +36,31 @@ namespace Platformer.Mechanics
             currentElevatorFrontPanel = GameObject.Find("Elevator Front Panel " + currentLevel.ToString());
             anim = currentElevatorFrontPanel.GetComponent<Animator>();       
             speed = GameObject.Find("Preferences").GetComponent<Preferences>().elevatorSpeed;
+            anim.SetFloat("speedMultiplier", GameObject.Find("Preferences").GetComponent<Preferences>().animSpeed);
         }
         
         
         void OnEnable(){
           Preferences.changeElevatorEvent += ElevatorSpeedChanged; // subscribing to the event. 
+          Preferences.changeAnimEvent += AnimSpeedChanged; // subscribing to the event. 
+
        }
 
        void OnDisable(){
           Preferences.changeElevatorEvent -= ElevatorSpeedChanged; // subscribing to the event. 
+          Preferences.changeAnimEvent -= AnimSpeedChanged; // subscribing to the event. 
        }
 
 
        void ElevatorSpeedChanged(float newElevatorSpeed){
           speed = newElevatorSpeed;
+       }
+       
+
+
+
+       void AnimSpeedChanged(float newAnimSpeed){
+          anim.SetFloat("speedMultiplier", newAnimSpeed);
        }
         
         public void _GoToLevel(int level) {
@@ -165,6 +176,7 @@ namespace Platformer.Mechanics
                 }
                 currentElevatorFrontPanel = GameObject.Find("Elevator Front Panel " + currentLevel.ToString());
                 anim = currentElevatorFrontPanel.GetComponent<Animator>();
+                anim.SetFloat("speedMultiplier", GameObject.Find("Preferences").GetComponent<Preferences>().animSpeed);
                 player.GetComponent<PlayerController>().canLeave = false;
                 float step =  speed * Time.deltaTime; // calculate distance to move
                 target.position = new Vector2(transform.position.x, targetY);

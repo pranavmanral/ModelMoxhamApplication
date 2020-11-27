@@ -15,6 +15,7 @@ public class FirstLoad : MonoBehaviour
         
         if(isFirstLoad) {
             anim = GameObject.Find("Main Camera").GetComponent<Animator>();    
+            anim.SetFloat("speedMultiplier", GameObject.Find("Preferences").GetComponent<Preferences>().animSpeed);
             anim.Play("Base Layer.CameraDolly", 0, 0.0f);
         }
         else {
@@ -29,4 +30,18 @@ public class FirstLoad : MonoBehaviour
     {
         
     }
+    
+    void OnEnable(){
+          Preferences.changeAnimEvent += AnimSpeedChanged; // subscribing to the event. 
+
+       }
+
+    void OnDisable(){
+          Preferences.changeAnimEvent -= AnimSpeedChanged; // subscribing to the event. 
+    }
+
+
+   void AnimSpeedChanged(float newAnimSpeed){
+      anim.SetFloat("speedMultiplier", newAnimSpeed);
+   }
 }
