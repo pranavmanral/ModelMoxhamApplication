@@ -65,6 +65,8 @@ namespace Platformer.Mechanics
             targetVelocity.y = move.y;
             targetVelocity = targetVelocity * maxSpeed;
             animator.SetFloat("velocityX", Mathf.Abs(targetVelocity.x) / maxSpeed);
+            animator.SetFloat("velocityY", Mathf.Abs(targetVelocity.y) / maxSpeed);
+            animator.SetFloat("velocityOverall", (Mathf.Abs(targetVelocity.x) / maxSpeed) + (Mathf.Abs(targetVelocity.y) / maxSpeed));
         }
 
     }

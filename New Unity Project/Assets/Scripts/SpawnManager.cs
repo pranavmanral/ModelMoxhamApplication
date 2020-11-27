@@ -15,7 +15,8 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+            GameObject.Find("Player").transform.localScale = new Vector3(0.2f,0.2f,0.2f);
+
     }
     
     void Awake()
