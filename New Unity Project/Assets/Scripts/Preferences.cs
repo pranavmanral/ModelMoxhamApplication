@@ -17,11 +17,11 @@ public class Preferences : MonoBehaviour
 
     public delegate void ChangeElevatorEvent (float elevatorSpeed); //I do declare!
     public static event ChangeElevatorEvent changeElevatorEvent;  // create an event variable 
-    public float elevatorSpeed = 0;
+    public float elevatorSpeed = 1;
     
     public delegate void ChangeWalkEvent (float walkSpeed); //I do declare!
     public static event ChangeWalkEvent changeWalkEvent;  // create an event variable 
-    public float walkSpeed = 0;
+    public float walkSpeed = 2;
     
     public delegate void ChangeAnimEvent (float animSpeed); //I do declare!
     public static event ChangeAnimEvent changeAnimEvent;  // create an event variable 

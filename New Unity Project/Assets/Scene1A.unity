@@ -5089,8 +5089,8 @@ MonoBehaviour:
   elevatorSlider: {fileID: 619895376}
   walkSlider: {fileID: 1619311264}
   animSlider: {fileID: 587189327}
-  elevatorSpeed: 0
-  walkSpeed: 0
+  elevatorSpeed: 1
+  walkSpeed: 2
   animSpeed: 1
 --- !u!4 &2142159475
 Transform:
