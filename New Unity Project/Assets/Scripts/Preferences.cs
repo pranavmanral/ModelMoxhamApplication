@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System.Linq;
 
 public class Preferences : MonoBehaviour
 {    
@@ -11,6 +12,8 @@ public class Preferences : MonoBehaviour
     public Slider walkSlider;
     public Slider animSlider;
     private static bool created = false;
+    GameObject cautionText;
+    GameObject cautionBg;
 
     public delegate void ChangeElevatorEvent (float elevatorSpeed); //I do declare!
     public static event ChangeElevatorEvent changeElevatorEvent;  // create an event variable 
@@ -32,6 +35,27 @@ public class Preferences : MonoBehaviour
      }
  
     public void changeWalkSpeed(){
+        if(walkSlider.value > 3) {
+            cautionText.SetActive(true);
+            cautionBg.SetActive(true);
+            var colors = walkSlider.colors;
+            colors.normalColor = Color.red;
+            colors.highlightedColor = Color.red;
+            colors.pressedColor = Color.red;
+            colors.selectedColor = Color.red;
+            walkSlider.colors = colors;     
+        }
+        else {
+            cautionText.SetActive(false);
+            cautionBg.SetActive(false);
+            var colors = walkSlider.colors;
+            colors.normalColor = Color.white;
+            colors.highlightedColor = Color.white;
+            colors.pressedColor = Color.white;
+            colors.selectedColor = Color.white;
+            walkSlider.colors = colors;
+        }
+    
         walkSpeed = walkSlider.value + 0.0f;
        if(changeWalkEvent!=null) // checking if anyone is on the other line.
              changeWalkEvent(walkSlider.value + 0.0f);
@@ -68,7 +92,11 @@ public class Preferences : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        cautionText = GameObject.Find("cautionText");
+        cautionBg = GameObject.Find("cautionBG");
         
+        cautionText.SetActive(false);
+        cautionBg.SetActive(false);
     }
 
     // Update is called once per frame
