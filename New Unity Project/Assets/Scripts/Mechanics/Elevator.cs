@@ -143,6 +143,7 @@ namespace Platformer.Mechanics
                 // Call Elevator to this level
                 player.GetComponent<PlayerController>().inElevator = true;
                 player.transform.parent = transform;
+
                 //getChild("Elevator Front Panel " + currentLevel.ToString(), "elevator_front").GetComponent<IsometricStaticObject>().floorHeight = -0.1f;
 
              }
@@ -155,6 +156,7 @@ namespace Platformer.Mechanics
                 player.GetComponent<PlayerController>().inElevator = false;
                 player.transform.parent = null;
                 DontDestroyOnLoad(Transition.instance);
+
                 //getChild("Elevator Front Panel " + currentLevel.ToString(), "elevator_front").GetComponent<IsometricStaticObject>().floorHeight = 0.6f;
 
              }
@@ -184,6 +186,8 @@ namespace Platformer.Mechanics
             }    
         
             if(doorClosed) {
+                player.GetComponent<CapsuleCollider2D>().isTrigger = true;
+
                 if(player.GetComponent<Platformer.Mechanics.PlayerController>().inElevator) {
                     player.GetComponent<Platformer.Mechanics.PlayerController>().controlEnabled = false;
                 }
@@ -200,6 +204,8 @@ namespace Platformer.Mechanics
                     // Swap the position of the cylinder.
                     this.transform.position = target.position;
                     arrived = true;
+                    player.GetComponent<CapsuleCollider2D>().isTrigger = false;
+
                     player.GetComponent<Platformer.Mechanics.PlayerController>().controlEnabled = true;
                     if(player.GetComponent<PlayerController>().inElevator) {
                         player.GetComponent<PlayerController>().atElevator = true;

@@ -91,6 +91,11 @@ public class Preferences : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
      }
  
+    public void Teleport() {
+        GameObject.Find("Player").GetComponent<CapsuleCollider2D>().isTrigger = true;
+        GameObject.Find("Player").transform.position = GameObject.Find("SpawnPoint1").transform.position;
+        GameObject.Find("Player").GetComponent<CapsuleCollider2D>().isTrigger = false;
+    }
  
  
  // Then you subscribe to the even from any class. and if the event is triggered (changed) then your other class will be notified.

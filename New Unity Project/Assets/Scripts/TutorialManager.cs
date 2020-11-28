@@ -17,6 +17,8 @@ public class TutorialManager : MonoBehaviour
     GameObject redArrowEntrance;
     GameObject helpButton;
     GameObject skipTutorialButton;
+    GameObject TeleportButton;
+
     GameObject player;
     public int page = 0;
     private static bool createdTutManager = false;
@@ -35,6 +37,7 @@ public class TutorialManager : MonoBehaviour
         redArrowEntrance = GameObject.Find("red_arrow (Entrance)");
         helpButton = GameObject.Find("HelpButton");
         skipTutorialButton = GameObject.Find("SkipTutorialButton");
+        TeleportButton = GameObject.Find("TeleportButton");
         liftsPage.SetActive(false);
         enteringStorePage.SetActive(false);
         endPage.SetActive(false);
@@ -74,6 +77,7 @@ public class TutorialManager : MonoBehaviour
         while(page < 5) {
             ManagePage(page + 1);
         }
+        GameObject.Find("SceneLoader").GetComponent<SpawnManager>().ShowTeleportButton(true);
     }
     
     public void LetsDoIt() {

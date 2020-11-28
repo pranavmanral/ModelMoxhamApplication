@@ -19,11 +19,14 @@ public class SpawnManager : MonoBehaviour
     public AudioClip Scene3E_Music;
     public AudioClip Elevator_Music;
     public AudioSource audioSource;
+    GameObject TeleportButton;
+
     
     // Start is called before the first frame update
     void Start()
     {
             GameObject.Find("Player").transform.localScale = new Vector3(0.2f,0.2f,0.2f);
+            
     }
     
     void Awake()
@@ -37,6 +40,7 @@ public class SpawnManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        TeleportButton = GameObject.Find("TeleportButton");
     }
 
     // Update is called once per frame
@@ -44,6 +48,11 @@ public class SpawnManager : MonoBehaviour
     {
         
     }
+    
+    public void ShowTeleportButton(bool show) {
+        TeleportButton.SetActive(show);
+    }
+
     
     public void LoadScene(string sceneToLoad, string spawnPoint) {
         point = spawnPoint;
