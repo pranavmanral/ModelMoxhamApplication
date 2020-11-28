@@ -16,6 +16,7 @@ public class Preferences : MonoBehaviour
     GameObject cautionBg;
     GameObject audioButton;
     GameObject mutedButton;
+    GameObject prefsMenu;
 
     public delegate void ChangeElevatorEvent (float elevatorSpeed); //I do declare!
     public static event ChangeElevatorEvent changeElevatorEvent;  // create an event variable 
@@ -118,6 +119,10 @@ public class Preferences : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+    
+    public void TogglePrefsMenu() {
+        prefsMenu.SetActive(!prefsMenu.activeSelf);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -132,8 +137,12 @@ public class Preferences : MonoBehaviour
         audioButton = GameObject.Find("AudioButton");
         mutedButton = GameObject.Find("MutedButton");
         
+        
         audioButton.SetActive(true);
         mutedButton.SetActive(false);
+        
+        prefsMenu = GameObject.Find("SpeedControls");
+        prefsMenu.SetActive(false);
     }
 
     // Update is called once per frame

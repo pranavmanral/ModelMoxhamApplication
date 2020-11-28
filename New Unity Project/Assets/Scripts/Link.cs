@@ -6,6 +6,7 @@ public class Link : MonoBehaviour
 {
 
 	public string URL;
+    public string AltURL;
 
 	/*public void OpenLink()
 	{
@@ -20,7 +21,7 @@ public class Link : MonoBehaviour
 	public void OpenLinkJSPlugin()
 	{
 		#if !UNITY_EDITOR
-		openWindow(URL);
+		openWindow(AltURL);
 		#endif
         if(GameObject.Find("TutorialManager").GetComponent<TutorialManager>().page == 3){
             GameObject.Find("TutorialManager").GetComponent<TutorialManager>().ManagePage(4);
