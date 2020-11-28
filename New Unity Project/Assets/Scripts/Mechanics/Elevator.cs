@@ -186,10 +186,10 @@ namespace Platformer.Mechanics
             }    
         
             if(doorClosed) {
-                player.GetComponent<CapsuleCollider2D>().isTrigger = true;
 
                 if(player.GetComponent<Platformer.Mechanics.PlayerController>().inElevator) {
                     player.GetComponent<Platformer.Mechanics.PlayerController>().controlEnabled = false;
+                    player.GetComponent<CapsuleCollider2D>().isTrigger = true;
                 }
                 currentElevatorFrontPanel = GameObject.Find("Elevator Front Panel " + currentLevel.ToString());
                 anim = currentElevatorFrontPanel.GetComponent<Animator>();
