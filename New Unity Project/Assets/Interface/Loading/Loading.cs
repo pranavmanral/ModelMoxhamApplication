@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Loading : MonoBehaviour
 {
+
+    public string sceneName;
+    public int yieldTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,12 +20,12 @@ public class Loading : MonoBehaviour
        // Debug.Log("Started Coroutine at timestamp : " + Time.time);
 
         //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(yieldTime);
 
         //After we have waited 5 seconds print the time again.
         //Debug.Log("Finished Coroutine at timestamp : " + Time.time);
 
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene(sceneName);
 
     }
 }

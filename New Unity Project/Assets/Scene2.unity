@@ -54459,7 +54459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalSprite: {fileID: 21300000, guid: d37c647b011fb4c1a9c87bf57b4c765c, type: 3}
   hoverSprite: {fileID: 21300000, guid: b93915b9735bf4c62bb3bf2175df66ec, type: 3}
-  portal_name: The Athlete's Foot
+  portal_name: Typo
 --- !u!70 &1557091613
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
