@@ -44,7 +44,7 @@ public class Preferences : MonoBehaviour
             var colors = walkSlider.colors;
             colors.normalColor = Color.red;
             colors.highlightedColor = Color.red;
-            colors.pressedColor = Color.red;
+            colors.pressedColor = new Color(1.0f, 0.7f, 0.7f);
             colors.selectedColor = Color.red;
             walkSlider.colors = colors;   
             var fill = (walkSlider as UnityEngine.UI.Slider).GetComponentsInChildren<UnityEngine.UI.Image>().FirstOrDefault(t => t.name == "Fill");
@@ -63,7 +63,7 @@ public class Preferences : MonoBehaviour
             var colors = walkSlider.colors;
             colors.normalColor = Color.white;
             colors.highlightedColor = Color.white;
-            colors.pressedColor = Color.white;
+            colors.pressedColor = new Color(0.78f, 0.78f, 0.78f);
             colors.selectedColor = Color.white;
             walkSlider.colors = colors;
             var fill = (walkSlider as UnityEngine.UI.Slider).GetComponentsInChildren<UnityEngine.UI.Image>().FirstOrDefault(t => t.name == "Fill");
