@@ -94,6 +94,13 @@ namespace Platformer.Mechanics
         {
             targetVelocity = Vector2.zero;
             ComputeVelocity();
+            
+            
+            velocity.x = targetVelocity.x;
+            velocity.y = targetVelocity.y;
+            var deltaPosition = velocity * Time.deltaTime;
+            var move = new Vector2(deltaPosition.x, deltaPosition.y);
+            PerformMovement(move);
         }
 
         protected virtual void ComputeVelocity()
@@ -128,11 +135,11 @@ namespace Platformer.Mechanics
             PerformMovement(move, true);
 */
 
-            velocity.x = targetVelocity.x;
+            /*velocity.x = targetVelocity.x;
             velocity.y = targetVelocity.y;
             var deltaPosition = velocity * Time.deltaTime;
             var move = new Vector2(deltaPosition.x, deltaPosition.y);
-            PerformMovement(move);
+            PerformMovement(move);*/
         }
 
         void PerformMovement(Vector2 move)
