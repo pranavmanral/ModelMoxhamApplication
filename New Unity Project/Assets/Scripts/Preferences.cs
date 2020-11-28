@@ -17,6 +17,7 @@ public class Preferences : MonoBehaviour
     GameObject audioButton;
     GameObject mutedButton;
     GameObject prefsMenu;
+    public bool isMute = false;
 
     public delegate void ChangeElevatorEvent (float elevatorSpeed); //I do declare!
     public static event ChangeElevatorEvent changeElevatorEvent;  // create an event variable 
@@ -105,6 +106,7 @@ public class Preferences : MonoBehaviour
         else {
             GameObject.Find("SceneLoader").GetComponent<AudioSource>().Pause();
         }
+        isMute = !yes;
    }
    
     void Awake()
@@ -138,8 +140,8 @@ public class Preferences : MonoBehaviour
         mutedButton = GameObject.Find("MutedButton");
         
         
-        audioButton.SetActive(true);
-        mutedButton.SetActive(false);
+        audioButton.SetActive(!isMute);
+        mutedButton.SetActive(isMute);
         
         prefsMenu = GameObject.Find("SpeedControls");
         prefsMenu.SetActive(false);
