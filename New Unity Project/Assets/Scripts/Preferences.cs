@@ -97,7 +97,12 @@ public class Preferences : MonoBehaviour
  
  
    public void haveSound(bool yes) {
-
+    
+        if(!yes && audioButton.GetComponent<DragVolume>().hasDragged) {
+            audioButton.GetComponent<DragVolume>().hasDragged = false;
+            return;
+        }
+    
         audioButton.SetActive(yes);
         mutedButton.SetActive(!yes);
         if(yes) {

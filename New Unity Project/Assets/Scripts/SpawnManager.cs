@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 
 public class SpawnManager : MonoBehaviour
 {
@@ -118,5 +118,7 @@ public class SpawnManager : MonoBehaviour
          else {
             audioSource.Pause();
          }
+        GameObject.Find("AudioVolume").GetComponent<Text>().text = "";
+
      }
 }
