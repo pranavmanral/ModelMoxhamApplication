@@ -81,17 +81,27 @@ public class SpawnManager : MonoBehaviour
 
      void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
      {
+        
          /*Debug.Log("Level Loaded");
          Debug.Log(scene.name);
          Debug.Log(mode);*/
          if(point != null) {
+             
+         
             GameObject.Find("Player").transform.position = GameObject.Find(point).transform.position; //Spawn player here
             if(scene.name == "Scene1A") {
+                if(!GameObject.Find("FirstLoad").GetComponent<FirstLoad>().isFirstLoad) {
+                    GameObject.Find("SceneLoader").GetComponent<SpawnManager>().ShowTeleportButton(true);
+                }
                 GameObject.Find("FirstLoad").GetComponent<FirstLoad>().isFirstLoad = false;
             }
             else if(scene.name == "Scene2") {
+                GameObject.Find("SceneLoader").GetComponent<SpawnManager>().ShowTeleportButton(true);
                 GameObject.Find("Elevator").transform.position = new Vector3(GameObject.Find("Elevator").transform.position.x, elevatorY, GameObject.Find("Elevator").transform.position.z);
                 GameObject.Find("Elevator").GetComponent<Platformer.Mechanics.Elevator>().targetY = elevatorY;
+            }
+            else {
+                GameObject.Find("SceneLoader").GetComponent<SpawnManager>().ShowTeleportButton(true);
             }
          }
          audioSource = GetComponent<AudioSource>();
