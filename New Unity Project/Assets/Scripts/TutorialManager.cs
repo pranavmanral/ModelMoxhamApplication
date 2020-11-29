@@ -18,6 +18,10 @@ public class TutorialManager : MonoBehaviour
     GameObject helpButton;
     GameObject skipTutorialButton;
     GameObject TeleportButton;
+    GameObject mainHelpPage;
+    GameObject musicVolumePage;
+    GameObject gameSpeedPage;
+    GameObject MMDiscoveryPage;
 
     GameObject player;
     public int page = 0;
@@ -50,6 +54,14 @@ public class TutorialManager : MonoBehaviour
         skipTutorialButton.SetActive(false);
         moxhamIntro1Page.SetActive(false);
         moxhamIntro2Page.SetActive(false);
+        mainHelpPage = GameObject.Find("HelpMainPage");
+        musicVolumePage = GameObject.Find("MusicVolumeAnswerPage");
+        gameSpeedPage = GameObject.Find("GameSpeedAnswerPage");
+        MMDiscoveryPage = GameObject.Find("ModelMoxhamAnswerPage");
+        mainHelpPage.SetActive(false);
+        musicVolumePage.SetActive(false);
+        gameSpeedPage.SetActive(false);
+        MMDiscoveryPage.SetActive(false);
     }
 
     // Update is called once per frame
@@ -100,6 +112,37 @@ public class TutorialManager : MonoBehaviour
     public void GoToStart() {
         ManagePage(0);
     }
+    
+    public void HideHelpPage() {
+        mainHelpPage.SetActive(false);
+        helpButton.SetActive(true);
+    }
+    
+    public void ShowHelpPage() {
+        musicVolumePage.SetActive(false);
+        gameSpeedPage.SetActive(false);
+        MMDiscoveryPage.SetActive(false);
+        mainHelpPage.SetActive(true);
+        helpButton.SetActive(false);
+    }
+    
+    public void ShowAnswerPage(string answer) {
+        mainHelpPage.SetActive(false);
+        switch (answer) {
+            case "Music Volume":
+                musicVolumePage.SetActive(true);
+                break;
+            case "Game Speed":
+                gameSpeedPage.SetActive(true);
+                break;
+            case "Model Moxham":
+                MMDiscoveryPage.SetActive(true);
+                break;
+        }
+    
+    }
+    
+    
     
     public void ManagePage(int num) {
         page = num;
