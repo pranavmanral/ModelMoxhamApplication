@@ -3958,7 +3958,7 @@ MonoBehaviour:
   Scene3C_Music: {fileID: 8300000, guid: 6677ab83438d04a36b8eede0f0a25144, type: 3}
   Scene3D_Music: {fileID: 8300000, guid: 82701f938785141bdad9814fa18d00db, type: 3}
   Scene3E_Music: {fileID: 8300000, guid: 6c499e44d8a764c2d8a346a467e56f88, type: 3}
-  Elevator_Music: {fileID: 8300000, guid: cc705523baede453f9d0932aa432237e, type: 3}
+  Elevator_Music: {fileID: 8300000, guid: 130870460918e4bf3bc4557f84a4f6c3, type: 3}
   audioSource: {fileID: 1047613522}
 --- !u!4 &1047613521
 Transform:
