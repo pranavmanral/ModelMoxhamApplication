@@ -7,6 +7,8 @@ public class Link : MonoBehaviour
 
 	public string URL;
     public string AltURL;
+    public bool ageRestricted = false;
+
 
 	/*public void OpenLink()
 	{
@@ -20,9 +22,16 @@ public class Link : MonoBehaviour
 
 	public void OpenLinkJSPlugin()
 	{
-		#if !UNITY_EDITOR
-		openWindow(AltURL);
-		#endif
+        if(GameObject.Find("AgeManager").GetComponent<AgeManager>().isUnderAge && ageRestricted) {
+            GameObject.Find("AgeRestrictionCanvas").GetComponent<CanvasGroup>().alpha = 1;
+        }
+        else {
+        #if !UNITY_EDITOR
+
+            openWindow(AltURL);
+        #endif
+
+        }
         if(GameObject.Find("TutorialManager").GetComponent<TutorialManager>().page == 3){
             GameObject.Find("TutorialManager").GetComponent<TutorialManager>().ManagePage(4);
         }

@@ -25,6 +25,10 @@ public class PreferencesMenu : MonoBehaviour
     
     }
     
+    public void changeVisitedPrefs() {
+        GameObject.Find("SceneChange").GetComponent<SceneManagement2>().visitedPreferences = true;
+    }
+    
     public void showAge() {
         GameObject.Find("AgeText").GetComponent<Text>().text = ageSlider.value.ToString();
     }
