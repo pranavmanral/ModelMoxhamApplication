@@ -38,6 +38,11 @@ namespace Platformer.Mechanics
                     transform.localScale = new Vector3(-1 * transform.localScale.x, transform.localScale.y,transform.localScale.z);
                 }
             }
+            else {
+            
+                move.x = 0;
+                move.y = 0;
+            }
             base.Update();
         }
         

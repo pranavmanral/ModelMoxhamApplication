@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Platformer.Mechanics
 {
@@ -190,6 +191,7 @@ namespace Platformer.Mechanics
                 if(player.GetComponent<Platformer.Mechanics.PlayerController>().inElevator) {
                     player.GetComponent<Platformer.Mechanics.PlayerController>().controlEnabled = false;
                     player.GetComponent<CapsuleCollider2D>().isTrigger = true;
+                    GameObject.Find("TeleportButton").GetComponent<Button>().interactable = false;
                 }
                 currentElevatorFrontPanel = GameObject.Find("Elevator Front Panel " + currentLevel.ToString());
                 anim = currentElevatorFrontPanel.GetComponent<Animator>();
@@ -205,10 +207,11 @@ namespace Platformer.Mechanics
                     this.transform.position = target.position;
                     arrived = true;
                     player.GetComponent<CapsuleCollider2D>().isTrigger = false;
-
-                    player.GetComponent<Platformer.Mechanics.PlayerController>().controlEnabled = true;
+                    GameObject.Find("TeleportButton").GetComponent<Button>().interactable = true;
                     if(player.GetComponent<PlayerController>().inElevator) {
                         player.GetComponent<PlayerController>().atElevator = true;
+                        player.GetComponent<Platformer.Mechanics.PlayerController>().controlEnabled = true;
+
                     }
                     levelSelected = false;
                     getChild("Elevator Front Panel " + currentLevel.ToString(), "elevator_front").GetComponent<IsometricStaticObject>().floorHeight = -0.1f;
