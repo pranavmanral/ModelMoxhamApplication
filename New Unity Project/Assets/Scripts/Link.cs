@@ -23,7 +23,8 @@ public class Link : MonoBehaviour
 	public void OpenLinkJSPlugin()
 	{
         if(GameObject.Find("AgeManager").GetComponent<AgeManager>().isUnderAge && ageRestricted) {
-            GameObject.Find("AgeRestrictionCanvas").GetComponent<CanvasGroup>().alpha = 1;
+            GameObject.Find("AgeRestrictionCanvas").GetComponent<Canvas>().enabled = true;    
+
         }
         else {
         #if !UNITY_EDITOR

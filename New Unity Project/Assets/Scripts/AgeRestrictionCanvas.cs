@@ -17,6 +17,6 @@ public class AgeRestrictionCanvas : MonoBehaviour
     }
     
      public void CloseAgeRestrictionCanvas() {
-        GetComponent<CanvasGroup>().alpha = 0;    
+        GetComponent<Canvas>().enabled = false;    
     }
 }
