@@ -109,7 +109,7 @@ public class CouponManager : MonoBehaviour
             }
             //string plainText = "ABCDEFGHIJKLMNOPQRST" + emailAddress + "\n" +  tempStoreName + "\n" +  tempDiscount;
 
-            Email.SendEmailToken("modelmoxhambroadway@gmail.com", emailAddress, "Coupon for you", "You have a free coupon from Model Moxham Broadway!" + HTML.P + "Store Name: " + tempStoreName + HTML.P +  "Discount details: " + tempDiscount, "519c824c-9e03-40de-ac44-9c2ab54dd3a4");
+            Email.SendEmailToken("modelmoxhambroadway@gmail.com", emailAddress, "Coupon for you", "You have a free coupon from Model Moxham Broadway!" + HTML.P + "Store Name: " + tempStoreName + HTML.P +  "Discount details: " + tempDiscount, "7def0a13-5c22-4c57-be10-5ceb4cb7f976");
 /*
              //DUCK.Crypto.SimpleAESEncryption.AESEncryptedText encrypted = DUCK.Crypto.SimpleAESEncryption.Encrypt(plainText, "sxzRzirMPNdMfAfpbeTfE1wPsIk5VLvQ");
              MailMessage mail = new MailMessage();
