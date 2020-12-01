@@ -160,6 +160,11 @@ public class Preferences : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(!isMute && !GameObject.Find("SceneLoader").GetComponent<AudioSource>().isPlaying) {
+            GameObject.Find("SceneLoader").GetComponent<AudioSource>().Play();
+        }
+        if(isMute) {
+            GameObject.Find("SceneLoader").GetComponent<AudioSource>().Pause();
+        }
     }
 }
